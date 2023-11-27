@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualização dinâmica de conteúdo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Atualização dinâmica de conteúdo</h1>
+    <p>Este exemplo mostra como atualizar o conteúdo de uma página web dinamicamente, sem a necessidade de recarregá-la.</p>
+    <input type="text" id="nome">
+    <input type="button" value="Atualizar" onclick="atualizar()">
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function atualizar() {
+    // Obtém o valor do campo de texto
+    const nome = document.getElementById("nome").value;
+  
+    // Cria um elemento de texto
+    const texto = document.createElement("p");
+    texto.textContent = nome;
+  
+    // Adiciona o elemento de texto ao DOM
+    document.getElementById("resultado").appendChild(texto);
+  }
+  </script>
+
+  <style>
+        body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 200px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    background-color: #ccc;
+    margin: 0 20px;
+    font-family: sans-serif;
+  }
+  </style>
+</body>
+</html>
